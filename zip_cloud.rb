@@ -9,7 +9,7 @@ class ZipCloud
     query = {zipcode: zipcode}
     query[:callback] = callback if callback
     hc = HTTPClient.new
-    JSON.parse(hc.get(URL, query).body)
+    JSON.parse(hc.get(URL, query).body, symbolize_names: true)
   end
   
 end
