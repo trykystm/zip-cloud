@@ -1,3 +1,2 @@
-# http
-“http”の実験
-for self-study
+# ZipCloud
+zipcloud (郵便番号検索API)
