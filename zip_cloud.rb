@@ -3,7 +3,7 @@ require 'json'
 
 class ZipCloud
   
-  URL = "http://zipcloud.ibsnet.co.jp/api/search/"
+  URL = "http://zipcloud.ibsnet.co.jp/api/search"
   
   def self.get(zipcode: , callback: nil)
     query = {zipcode: zipcode}
