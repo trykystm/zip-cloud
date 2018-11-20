@@ -1,5 +1,6 @@
+# -*- coding: utf-8 -*-
 require 'rspec'
-require 'zip_cloud'
+require './zip_cloud'
 
 describe 'ZipCloud' do
   describe '#get' do
