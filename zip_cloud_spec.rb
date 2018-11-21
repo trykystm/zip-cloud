@@ -11,10 +11,20 @@ describe 'ZipCloud' do
       it {is_expected.to eq get}
     end
     
+    context 'address is not found' do
+      xit {is_expected.to be_nil}
+    end
+    
     context 'when argument is nothing' do
+      xit {is_expected.to be false}
     end
     
     context 'when argument is illegal' do
+      xit {is_expected.to be false}
+    end
+    
+    contect 'when zipcode is wrong figure length' do
+      xit {is_expected.to be false}
     end
     
   end
