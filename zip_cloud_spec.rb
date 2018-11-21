@@ -25,7 +25,7 @@ describe 'ZipCloud' do
       xit {is_expected.to be false}
     end
     
-    contect 'when zipcode is wrong figure length' do
+    context 'when zipcode is wrong figure length' do
       xit {is_expected.to be false}
     end
     
