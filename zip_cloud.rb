@@ -10,7 +10,7 @@ class ZipCloud
     query[:callback] = callback if callback
     hc = HTTPClient.new
     rtn = JSON.parse(hc.get(URL, query).body, symbolize_names: true)
-    rtn[:results]
+    rtn[:results].first
   end
   
 end
