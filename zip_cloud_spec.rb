@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 require './zip_cloud'
 
-RSpec.describe 'ZipCloud' do
+RSpec.describe ZipCloud do
   describe 'get' do
     
     subject {ZipCloud.get zipcode: zipcode}
@@ -14,19 +14,20 @@ RSpec.describe 'ZipCloud' do
     
     context 'address is not found' do
       let(:zipcode){'5368421'}
-      xit {is_expected.to be_nil}
+      it {is_expected.to be_nil}
     end
     
-    context 'when argument is nothing' do
-      xit {is_expected.to be false}
+    xcontext 'when argument is nothing' do
+      let(:zipcode){nil}
+      it {is_expected.to be false}
     end
     
-    context 'when argument is illegal' do
-      xit {is_expected.to be false}
+    xcontext 'when argument is illegal' do
+      it {is_expected.to be false}
     end
     
-    context 'when zipcode is wrong figure length' do
-      xit {is_expected.to be false}
+    xcontext 'when zipcode is wrong figure length' do
+      it {is_expected.to be false}
     end
     
   end
