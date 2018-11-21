@@ -14,7 +14,8 @@ describe 'ZipCloud' do
     end
     
     context 'address is not found' do
-      xit {is_expected.to be_nil}
+      let(:zipcode){'5368421'}
+      it {is_expected.to be_nil}
     end
     
     context 'when argument is nothing' do
