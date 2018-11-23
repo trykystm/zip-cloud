@@ -30,7 +30,7 @@ RSpec.describe ZipCloud do
     end
     
     xcontext 'when zipcode is wrong figure length' do
-      let(:zipcode'){'53684'}
+      let(:zipcode){'53684'}
       it {is_expected.to be false}
     end
     
