@@ -8,12 +8,12 @@ RSpec.describe ZipCloud do
 
     
     
-    context 'address is not found' do
+    xcontext 'address is not found' do
       let(:zipcode){'5368421'}
       it {is_expected.to be_nil}
     end
     
-    xcontext 'with argument 7830060' do
+    context 'with argument 7830060' do
       let(:get){{:address1=>"高知県", :address2=>"南国市", :address3=>"蛍が丘", :kana1=>"ｺｳﾁｹﾝ", :kana2=>"ﾅﾝｺｸｼ", :kana3=>"ﾎﾀﾙｶﾞｵｶ", :prefcode=>"39", :zipcode=>"7830060"}}
       let(:zipcode){'7830060'}
       it {is_expected.to eq get}
