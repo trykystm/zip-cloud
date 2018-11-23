@@ -21,8 +21,7 @@ RSpec.describe Test do
     
     context 'when arg is nil' do
       let(:arg){nil}
+      it {is_expected.to be_falsy}
     end
   end
 end
-    
-      
