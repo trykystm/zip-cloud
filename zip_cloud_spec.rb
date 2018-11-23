@@ -8,7 +8,7 @@ RSpec.describe ZipCloud do
 
     
     
-    xcontext 'address is not found' do
+    context 'address is not found' do
       let(:zipcode){'5368421'}
       it {is_expected.to be_nil}
     end
@@ -29,7 +29,7 @@ RSpec.describe ZipCloud do
       it {is_expected.to be false}
     end
     
-    xcontext 'when zipcode is wrong figure length' do
+    context 'when zipcode is wrong figure length' do
       let(:zipcode){'53684'}
       it {is_expected.to be false}
     end
