@@ -15,6 +15,7 @@ RSpec.describe Test do
     end
     
     context 'that return Array include Hash' do
+      let(:arg){'abc'}
       it {is_expected.to eq ({a: 'abc'})}
     end
     
