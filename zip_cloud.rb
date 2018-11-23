@@ -9,12 +9,17 @@ class ZipCloud
     query = {zipcode: zipcode}
     query[:callback] = callback if callback
     hc = HTTPClient.new
-    response = hc.get(URL, query).body
-    JSON.parse(response, symbolize_names: true)[:results].first
+    response = JSON.parse(hc.get(URL, query).body, symbolize_names: true)
+    if response[:status] == 200
+      results = response[:results]
+      results ? results.first : results
+    else
+      false
+    end
   end
   
 end
 
 if $0 == __FILE__
-  ZipCloud.get zipcode:'6638186'
+  p ZipCloud.get zipcode:'7830060'
 end
