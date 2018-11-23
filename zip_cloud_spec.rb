@@ -19,7 +19,7 @@ RSpec.describe ZipCloud do
       it {is_expected.to eq get}
     end
     
-    xcontext 'when argument is nothing' do
+    context 'when argument is nothing' do
       let(:zipcode){''}
       it {is_expected.to be false}
     end
