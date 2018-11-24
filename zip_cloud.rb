@@ -14,7 +14,7 @@ class ZipCloud
       results = response[:results]
       results ? results.first : {}
     else
-      {massage: response[:message]}
+      {message: response[:message]}
     end
   end
   
