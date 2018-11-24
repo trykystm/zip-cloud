@@ -15,22 +15,17 @@ class ZipCloud
       results ? results.first : results
     else
       raise response[:message]
-      
-      #false
+    rescue 
+    false
     end
   end
   
 end
 
 if $0 == __FILE__
-  begin
   p ZipCloud.get zipcode:'7830060'
   p ZipCloud.get zipcode:''
   p ZipCloud.get zipcode:'illigal'
   p ZipCloud.get zipcode:'8659512'
   p ZipCloud.get zipcode:'7457'
-    
-  rescue
-    p $!
-  end
 end
