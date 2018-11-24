@@ -16,7 +16,7 @@ class ZipCloud
     else
       raise ArgumentError response[:message]
       
-      false
+      #false
     end
   end
   
