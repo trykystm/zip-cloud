@@ -8,7 +8,7 @@ RSpec.describe ZipCloud do
     
     context 'address is not found' do
       let(:zipcode){'5368421'}
-      it {is_expected.to be_nil}
+      it {is_expected.to match {}}
     end
     
     context 'with argument 7830060' do
@@ -24,13 +24,15 @@ RSpec.describe ZipCloud do
     end
     
     context 'when argument is illegal' do
+      let(:get){{:message=>"パラメータ「郵便番号」に数字以外の文字が指定されています。"}}
       let(:zipcode){'illegal'}
-      it {is_expected.to be false}
+      it {is_expected.to match get}
     end
     
     context 'when zipcode is wrong figure length' do
+      let(:get){{:message=>"パラメータ「郵便番号」の桁数が不正です。"}}
       let(:zipcode){'53684'}
-      it {is_expected.to be false}
+      it {is_expected.to match get}
     end
     
   end
