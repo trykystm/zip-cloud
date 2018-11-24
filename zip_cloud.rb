@@ -17,9 +17,9 @@ class ZipCloud
       begin
         raise response[:message]
         rescue
-#          $!
+          $!
       end
-    false
+#    false
     end
   end
   
