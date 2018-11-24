@@ -23,7 +23,7 @@ end
 
 if $0 == __FILE__
   p ZipCloud.get zipcode:'7830060'
-  p ZipCloud.get zipcode:
+  p ZipCloud.get zipcode:''
   p ZipCloud.get zipcode:'illigal'
   p ZipCloud.get zipcode:'8659512'
   p ZipCloud.get zipcode:'7457'
