@@ -7,8 +7,9 @@ RSpec.describe ZipCloud do
     subject {ZipCloud.get zipcode: zipcode}
     
     context 'address is not found' do
+      let(:get){{}}
       let(:zipcode){'5368421'}
-      it {is_expected.to match {}}
+      it {is_expected.to match get}
     end
     
     context 'with argument 7830060' do
