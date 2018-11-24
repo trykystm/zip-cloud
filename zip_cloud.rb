@@ -14,9 +14,11 @@ class ZipCloud
       results = response[:results]
       results ? results.first : results
     else
-      raise response[:message]
-      rescue
-        $!
+      begin
+        raise response[:message]
+        rescue
+          $!
+      end
     #false
     end
   end
