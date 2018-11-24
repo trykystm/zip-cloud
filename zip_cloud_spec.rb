@@ -19,7 +19,8 @@ RSpec.describe ZipCloud do
     
     context 'when argument is nothing' do
       let(:zipcode){''}
-      it {is_expected.to be false}
+      it {is_expected.to eq '{:massage=>"必須パラメータが指定されていません。"}
+'}
     end
     
     context 'when argument is illegal' do
