@@ -14,7 +14,7 @@ class ZipCloud
       results = response[:results]
       results ? results.first : results
     else
-      #raise ArgumentError response[:message]
+      raise ArgumentError response[:message]
       
       false
     end
