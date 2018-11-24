@@ -8,7 +8,7 @@ RSpec.describe ZipCloud do
     
     context 'address is not found' do
       let(:get){{}}
-      let(:zipcode){'5368421'}
+      let(:zipcode){'0000000'} #not existing zipcode
       it {is_expected.to match get}
     end
     
