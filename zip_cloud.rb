@@ -12,7 +12,7 @@ class ZipCloud
     response = JSON.parse(hc.get(URL, query).body, symbolize_names: true)
     if response[:status] == 200
       results = response[:results]
-      results ? results.first : results
+      results ? results.first : {}
     else
       false
     end
