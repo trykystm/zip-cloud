@@ -31,6 +31,6 @@ if $0 == __FILE__
   p ZipCloud.get zipcode:'7457'
     
   rescue
-    $!
+    p $!
   end
 end
