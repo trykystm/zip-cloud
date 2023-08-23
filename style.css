@@ -1,0 +1,33 @@
+html{
+    font-size: 100%;
+}
+
+body{
+    color: #24292e;
+}
+
+a{
+    text-decoration: none;
+}
+
+p{
+    font-size: 1.3rem;
+}
+
+img{
+    max-width: 100%;
+}
+li{
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+/* header */
+#header{
+    max-width: 960px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    
+}
