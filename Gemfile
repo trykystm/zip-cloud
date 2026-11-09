@@ -9,3 +9,4 @@ gem 'httpclient'
 gem 'mutex_m'
 gem 'rspec'
 gem 'rubocop', require: false
+gem 'webmock', group: :test

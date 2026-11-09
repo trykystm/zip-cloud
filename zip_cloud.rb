@@ -24,6 +24,8 @@ class ZipCloud
     return { message: response[:message] } unless response[:status] == 200
 
     response[:results]&.first || {}
+  rescue StandardError => e
+    { message: "通信エラーが発生しました: #{e.message}" }
   end
 end
 
