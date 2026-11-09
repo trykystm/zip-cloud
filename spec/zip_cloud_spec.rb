@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require './zip_cloud'
+require 'spec_helper'
 
 RSpec.describe ZipCloud do
-  describe '#get' do
+  describe '.get' do
     subject { described_class.get(zipcode: zipcode) }
 
     context 'when address is not found' do
